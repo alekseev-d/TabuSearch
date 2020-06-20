@@ -7,7 +7,7 @@
 namespace Ts
 {
 	const int TABU_LENGTH = 30;
-	const int NUM_INTERATION = 3000;
+	const int NUM_INTERATION = 100;
 	const int PENAL_LONG_TERM = 10;
 	const int LONG_TERM_LENGTH = 100;
 	const int TIME_TRY = 500;
@@ -29,6 +29,10 @@ namespace Ts
 			for (int j = 0; j < count; ++j)
 			{
 				file >> matrix[i][j];
+				if (matrix[i][j] < 0)
+				{
+					throw NegativeWeightException("Tabu Search Exception: Negative Weight Error ");
+				}
 			}
 		}
 

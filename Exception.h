@@ -21,6 +21,12 @@ namespace Ts
 		explicit FileTsException(const std::string& str) noexcept : TabuSearchException(str) {};
 	};
 
+	class NegativeWeightException : TabuSearchException
+	{
+	public:
+		explicit NegativeWeightException(const std::string& str) noexcept : TabuSearchException(str) {};
+	};
+
 	class MatrixIndexTsException : TabuSearchException
 	{
 	public:
